@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 
-user = { 'admin': True, 'active': True, 'name': 'Kevin'}
+user = { 'admin': False, 'active': False, 'name': 'Kevin'}
 
-for key, value in user.items():
-    if key is 'admin' and value is True:
-        print ("User is admin")
-
-
+if user['admin'] and user['active']:
+    print ("ACTIVE - (ADMIN) %s " % (user['name']))
+elif user['admin']:
+    print ("(ADMIN) %s " % (user['name']))
+elif user['active']:
+    print ("ACTIVE %s " % (user['name']))
+else:
+    print ("%s" % (user['name']))
