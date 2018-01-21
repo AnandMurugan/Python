@@ -5,13 +5,14 @@ users = [{'admin': True, 'active': True, 'name': 'Kavin'},
          {'admin': True, 'active': False, 'name': 'Jerry'},
          {'admin': False, 'active': False, 'name': 'Mickey'},
          {'admin': True, 'active': True, 'name': 'Popeye'}]
-
+line_number = 1
 for user in users:
     if user['admin'] and user['active']:
-        print ("(ADMIN) - ACTIVE %s " % (user['name']))
+        print ("%s (ADMIN) - ACTIVE %s " % (line_number, user['name']))
     elif user['active']:
-        print ("ACTIVE %s " % (user['name']))
+        print ("%s ACTIVE %s " % (line_number, user['name']))
     elif user['admin']:
-        print ("(ADMIN) %s " % (user['name']))
+        print ("%s (ADMIN) %s " % (line_number, user['name']))
     else:
-        print ("%s " % (user['name']))
+        print ("%s %s " % (line_number, user['name']))
+    line_number += 1
