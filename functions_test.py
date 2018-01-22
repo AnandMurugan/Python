@@ -7,10 +7,11 @@ def print_message(message, count):
 
 
 message = raw_input("Please enter a message to echo ")
-count = input("Please enter number of times to print the message ")
+string_count = raw_input("Please enter number of times to print the message ") 
 
-if not count:
+if string_count:
+    count = int(string_count)
+else:
     count = 1
 
 print_message(message, count)
-print ("You entered : %s " % (message))
