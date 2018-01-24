@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-import os
+from os import getenv
+from math import pi
 
-digits = os.getenv("DIGITS").strip()
+digits = int (getenv("DIGITS") or 10)
 
-print(digits)
+print("%.*f" % (digits, pi))
